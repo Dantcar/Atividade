@@ -313,7 +313,6 @@ public class DataPTBR {
 
 	/* Time */
 	ret = ret.concat(Datas.getHora(date)+" GMT");
-;
 
 	return ret;
     }
@@ -332,7 +331,7 @@ public class DataPTBR {
 	ret = ret.concat(Datas.getMes(date)+"-");
 	ret = ret.concat(Datas.getAno(date, false)+" ");
 	
-	ret = ret.concat(Datas.getTime(date)+" GMT");
+	ret = ret.concat(Datas.getHora(date)+" GMT");
 
 	return ret;
     }
