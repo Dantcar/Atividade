@@ -67,19 +67,19 @@ public class Datas {
 	    ret = ret.concat("Domingo");
 	    break;
 	case Calendar.MONDAY:
-	    ret = ret.concat("Segunda");
+	    ret = ret.concat("Segunda-Feira");
 	    break;
 	case Calendar.TUESDAY:
-	    ret = ret.concat("Terça");
+	    ret = ret.concat("Terça-Feira");
 	    break;
 	case Calendar.WEDNESDAY:
-	    ret = ret.concat("Quarta");
+	    ret = ret.concat("Quarta-Feira");
 	    break;
 	case Calendar.THURSDAY:
-	    ret = ret.concat("Quinta");
+	    ret = ret.concat("Quinta-Feira");
 	    break;
 	case Calendar.FRIDAY:
-	    ret = ret.concat("Sexta");
+	    ret = ret.concat("Sexta-Feira");
 	    break;
 	case Calendar.SATURDAY:
 	    ret = ret.concat("Sabado");
@@ -215,6 +215,47 @@ public class Datas {
 	default:
 	    ret = ret.concat("Janeiro");
 
+	}
+
+	return ret;
+    }
+     /**
+      * 
+      * Método que retorna o ano com 4 digitos se o segundo parametro for 'true'
+      * @param date
+      * @param four
+      * @return 
+      */
+     public static String getAno(GregorianCalendar date, boolean four){
+	String ret = "";
+
+	int year = date.get(Calendar.YEAR);
+
+	if(year < 10){
+	    if(four){
+		ret = ret.concat("000");
+	    } else {
+		ret =ret.concat("0");
+	    }
+	    ret =ret.concat(""+year);
+	} else if (year < 100){
+	    if(four){
+		ret = ret.concat("00"+year);
+	    } else {
+		ret =ret.concat(""+(year%100));
+	    }
+	} else if (year < 1000){
+	    if(four){
+		ret = ret.concat("0"+year);
+	    } else {
+		ret = ret.concat(""+(year%100));
+	    }
+	} else {
+	    if(four){
+		ret = ret.concat(""+year);
+	    } else {
+		ret = ret.concat(""+(year%100));
+	    }
 	}
 
 	return ret;
@@ -493,6 +534,27 @@ public class Datas {
         System.out.println(Datas.getDiaSemanaLongo(cal));
         System.out.println(Datas.getMes(cal));
         System.out.println(Datas.getMesLongo(cal));
+        
+        System.out.println(Datas.getAno(cal, true));
+        System.out.println(Datas.getAno(cal, false));
+        
+        
+        String dia,dia1,mes,ano;
+        dia = Datas.getDiaSemanaLongo(cal);
+        dia1 = Datas.getDay(cal, true);
+        mes = Datas.getMesLongo(cal);
+        ano = Datas.getYear(cal, true);
+        
+        System.out.println(
+                dia +", "
+                +dia1 + " "
+                +mes +" "
+                + "" + ano
+                );
+        
+        
+        
+        
         
 	System.exit(0);
     }
