@@ -10,31 +10,17 @@
 //import java.time.format.DateTimeFormatter;
 package atividade;
 
-
-/**
- * @version 
- * @author Dantcar
- * @since 
- */
-public class JodaData {
-/*
-    package manipuladatas;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.Locale;
-
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.joda.time.Hours;
 import org.joda.time.Months;
 import org.joda.time.Years;
 import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
 
-//import java.time.format.DateTimeFormatter;
-
-public class ManipulaDatas {
+public class JodaData {
 	public static void main(String[] args) {
 		DateTime dateTime = new DateTime();
 		// Imprimindo a data no formato YYYY-MM-dd
@@ -50,7 +36,7 @@ public class ManipulaDatas {
 		
 		//pdf09-2
 		//formatacao da data
-		DateTimeFormatter fmt = DateTimeFormat.forPattern("dd-MM-YYYY");
+		org.joda.time.format.DateTimeFormatter fmt = DateTimeFormat.forPattern("dd-MM-YYYY");
 		// Alternativa 1
 		System.out.println(fmt.print(dateTime));
 		// Alternativa 2
@@ -101,5 +87,4 @@ public class ManipulaDatas {
 	
 	}
 }
-    */
-}
+    
