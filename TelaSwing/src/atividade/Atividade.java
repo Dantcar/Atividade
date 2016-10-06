@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telaswing;
+package atividade;
 
 /**
  *
  * @author deciodecarvalho
  */
-public class TelaSwing {
+public class Atividade {
 
     /**
      * @param args the command line arguments
