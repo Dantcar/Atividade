@@ -35,7 +35,7 @@ public class TelaOpenFile extends javax.swing.JFrame {
 
                 
         this.dispose();
-        this.hide();
+        this.setVisible(true);
         jFileChooser1.setVisible(false);
     }
 
